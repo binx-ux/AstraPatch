@@ -1,0 +1,40 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Log Files
+*.log
+npm-debug.log*
+
+# Environment Variables (if you add any)
+.env
+.env.local
+.env.production
+
+# Build Output (if you add a build step later)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Dependencies (if you add npm later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
+
+# Personal Notes
+notes.txt
+TODO.txt
