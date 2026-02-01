@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstraPatch - Real-Time Space Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">ASTRA</span><span class="logo-accent">PATCH</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#launches" class="nav-link">Launches</a></li>
+                <li><a href="#solar" class="nav-link">Solar Events</a></li>
+                <li><a href="#apod" class="nav-link">Picture of the Day</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="ASTRAPATCH">ASTRAPATCH</h1>
+            <p class="hero-subtitle">Real-Time Space Exploration Monitoring System</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="launchCount">0</span>
+                    <span class="stat-label">Upcoming Launches</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="activeEvents">0</span>
+                    <span class="stat-label">Active Events</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="launches" class="section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Rocket Launches</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Missions</button>
+                <button class="filter-btn" data-filter="spacex">SpaceX</button>
+                <button class="filter-btn" data-filter="nasa">NASA</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            <div id="launchesGrid" class="grid">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solar" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Solar Activity & Events</h2>
+            <div class="solar-grid">
+                <div class="solar-card">
+                    <h3>Solar Flares</h3>
+                    <div id="solarFlares" class="solar-content">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+                <div class="solar-card">
+                    <h3>Coronal Mass Ejections</h3>
+                    <div id="cmeEvents" class="solar-content">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+                <div class="solar-card">
+                    <h3>Geomagnetic Storms</h3>
+                    <div id="geoStorms" class="solar-content">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apod" class="section">
+        <div class="container">
+            <h2 class="section-title">Astronomy Picture of the Day</h2>
+            <div id="apodContainer" class="apod-container">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>AstraPatch - Data provided by NASA APIs, The Space Devs, and DONKI</p>
+            <p>Real-time space exploration monitoring system</p>
+        </div>
+    </footer>
+
+    <audio id="hoverSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRhQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" type="audio/wav">
+    </audio>
+    <audio id="clickSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRhQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
