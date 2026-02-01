@@ -56,13 +56,6 @@ Daily NASA APOD with high-resolution imagery and descriptions.
 - Multiple NASA and space APIs
 - No external dependencies or build process
 
-## Setup
-
-1. Clone the repository
-2. Open index.html in a modern browser
-3. No installation or build process required
-
-For production deployment, upload to any static hosting service (GitHub Pages, Netlify, Vercel).
 
 ## Browser Support
 
